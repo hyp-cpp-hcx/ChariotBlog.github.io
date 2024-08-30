@@ -173,7 +173,7 @@
         <p>1.安装git和Node.js</p>
 <ul>
 <li><p>打开Git Bash输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -185,7 +185,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 查看保存ssh密钥的文件夹 `一般都在C:\Users\你的用户\.ssh`</span><br><span class="line">- github添加ssh</span><br><span class="line"></span><br><span class="line">setting-&gt;ssh and gpg keys-&gt;New ssh kEy-&gt;粘贴秘钥</span><br><span class="line">- 在.ssh文件夹下创建config文件 并添加如下内容</span><br></pre></td></tr></table></figure>
 
 <p>  Host github.com<br>  HostName ssh.github.com  # 这是最重要的部分<br>  User git<br>  Port 443<br>  PreferredAuthentications publickey<br>  IdentityFile ~&#x2F;.ssh&#x2F;id_rsa </p>
-<p>  &#x2F;&#x2F;测试ssh链接<br>  $ ssh <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;</a></p>
+<p>  &#x2F;&#x2F;测试ssh链接<br>  $ ssh <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>  The authenticity of host ‘[ssh.github.com]:443 ([20.205.243.160]:443)’ can’t be established.<br>  ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF&#x2F;zLDA0zPMSvHdkr4UvCOqU.<br>  This key is not known by any other names.<br>  Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])? yes<br>  Warning: Permanently added ‘[ssh.github.com]:443’ (ED25519) to the list of known hosts.<br>  PTY allocation request failed on channel 0<br>  Hi WaitAyaka! You’ve successfully authenticated, but GitHub does not provide shell access.<br>  Connection to ssh.github.com closed.  &#x2F;&#x2F;显示 HI <code>你的用户名</code>！即为连接成功</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-  github创建blog 项目    （&lt;mark&gt;博客网址中必须使用你github的用户名，即，我的用户名为laoxiao79，那么网址必须为laoxiao79.github.io）&lt;/mark&gt;</span><br><span class="line"></span><br><span class="line">2.安装Hexo</span><br><span class="line"></span><br><span class="line">- 更改npm镜像源</span><br></pre></td></tr></table></figure>
 
