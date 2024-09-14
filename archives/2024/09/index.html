@@ -50,62 +50,6 @@
 
 
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
 
@@ -278,95 +222,30 @@
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2024/09/14/0x80190001%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/">0x80190001错误解决</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      Posted on:&nbsp;2024-09-14
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2024-09-14
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      In:&nbsp;
-    </span>
-    
-  </div>
-</div>   
-    
 
-
-
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>​	<strong>windows11出现这样的错误，初步判断为windows的网络连接问题引起的，或者是系统当前网络设置的问题，当然也不排除win11自身系统的bug存在导致。一般这个错误会导致用户账户无法登陆、windows商店无法显示内容、个人账户无法同步或验证等相关问题。下面我们来看看具体的修复方法。</strong></p>
-<p>若当前系统中正在使用代理（<code>VPN</code>、梯子等软件）或游戏加速器等，首先关闭。<br><strong>1、打开开始界面的<code>Windows Powershell（管理员）</code>或<code>Windows终端...
-          
-        </div>
+<div class="mdui-card mdui-p-a-4 mdui-m-b-5">
+    <div class="page-describe">
+        2 posts in total.
+    </div>
+    <div class="posts-collapse">
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2024/09/14/0x80190001%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/">Read More</a>
-        </div>
-      </div>
-    </article>
+            
+            
+                <div class="collection-title">
+                    <a href="/archives/2024"><h2>2024<small>Archives</small></h2></a>
+                </div>
+                
+            
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2024/08/30/%E5%9F%BA%E4%BA%8EHexo-%E5%92%8Cgithub-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">基于Hexo 和github 搭建博客</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      Posted on:&nbsp;2024-08-30
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2024-08-30
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      In:&nbsp;
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <p>1.安装git和Node.js</p>
-<p>打开Git Bash输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-          
-        </div>
+            <div class="collection-item">
+                <h3><a href="/2024/09/14/0x80190001%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/">0x80190001错误解决</a></h3>
+                <time itemprop="dateCreated" datetime=2024-09-14 >
+                    2024.09.14
+                </time>
+            </div>
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2024/08/30/%E5%9F%BA%E4%BA%8EHexo-%E5%92%8Cgithub-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Read More</a>
-        </div>
-      </div>
-    </article>
-
+    </div>
+</div>
 
 
   </main>
